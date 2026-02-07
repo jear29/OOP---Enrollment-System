@@ -28,4 +28,10 @@ public class Student {
     public void setProgram(String program) {
         this.program = program;
     }
+
+    public void display() {
+        System.out.printf("\nStudent ID: %s\n", getStudentID());
+        System.out.printf("Student Name: %s\n", getStudentName());
+        System.out.printf("Program: %s\n", getProgram());
+    }
 }

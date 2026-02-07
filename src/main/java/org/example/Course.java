@@ -28,4 +28,10 @@ public class Course {
     public void setProgram(String program) {
         this.program = program;
     }
+
+    public void display() {
+        System.out.printf("\nCourse ID: %s\n", getCourseID());
+        System.out.printf("Course Name: %s\n", getCourseName());
+        System.out.printf("Program: %s\n", program());
+    }
 }
