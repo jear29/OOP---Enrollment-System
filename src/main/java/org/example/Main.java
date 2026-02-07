@@ -28,8 +28,5 @@ public class Main {
         System.out.printf("\nCourse ID: %s\n", course.getCourseID());
         System.out.printf("Course Name: %s\n", course.getCourseName());
         System.out.printf("Program: %s\n", course.program());
-
-
-
     }
 }
