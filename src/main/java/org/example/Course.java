@@ -21,7 +21,7 @@ public class Course {
         this.courseName = courseName;
     }
 
-    public String program() {
+    public String getProgram() {
         return program;
     }
 
@@ -32,6 +32,6 @@ public class Course {
     public void display() {
         System.out.printf("\nCourse ID: %s\n", getCourseID());
         System.out.printf("Course Name: %s\n", getCourseName());
-        System.out.printf("Program: %s\n", program());
+        System.out.printf("Program: %s\n", getProgram());
     }
 }
