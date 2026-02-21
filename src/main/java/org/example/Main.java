@@ -1,26 +1,41 @@
 package org.example;
 
+import org.example.model.Course;
+import org.example.model.Student;
+import org.example.service.CourseRegistration;
+import org.example.service.StudentRegistration;
+
 public class Main {
     public static void main(String[] args) {
-        Student student = new Student();
-        student.setStudentID("000123");
-        student.setStudentName("John Doe");
-        student.setProgram("Information Technology");
 
-        student.display();
+        // STUDENT REGISTRATION
+        StudentRegistration studentRegistration = new StudentRegistration();
 
-        Student student1 = new Student();
-        student1.setStudentID("000124");
-        student1.setStudentName("Jane Doe");
-        student1.setProgram("Information Technology");
+        // create
+        studentRegistration.saveStudent(new Student("000123", "John Doe", "Information Technology"));
 
-        student1.display();
+        // read
+        studentRegistration.displayAllStudent();
 
-        Course course = new Course();
-        course.setCourseID("00001");
-        course.setCourseName("Integrative Programming");
-        course.setProgram("Information Technology");
+        // update
+        studentRegistration.updateStudent(new Student("000123", "John Doe", "Computer Science"));
 
-        course.display();
+        // delete
+        studentRegistration.removeStudent(new Student("000123", "John Doe", "Computer Science"));
+
+        // COURSE REGISTRATION
+        CourseRegistration courseRegistration = new CourseRegistration();
+
+        // create
+        courseRegistration.save(new Course("00001", "Integrative Programming", "Information Technology"));
+
+        // read
+        courseRegistration.displayAll();
+
+        // update
+        courseRegistration.updateCourse(new Course("00001", "Information Management", "Information Technology"));
+
+        // delete
+        courseRegistration.removeCourse(new Course("00001", "Information Management", "Information Technology"));
     }
 }
