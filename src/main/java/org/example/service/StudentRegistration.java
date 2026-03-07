@@ -17,7 +17,7 @@ public class StudentRegistration {
 
     public void updateStudent(Student student) {
         for (int i = 0; i < studentList.size(); i++) {
-            if (studentList.get(i).getStudentName().equals(student.getStudentID())) {
+            if (studentList.get(i).getName().equals(student.getID())) {
                 studentList.set(i, student);
                 break;
             }
@@ -26,7 +26,7 @@ public class StudentRegistration {
 
     public String removeStudent(Student student) {
         for (int i = 0; i < studentList.size(); i++) {
-            if (studentList.get(i).getStudentID().equals(student.getStudentID())) {
+            if (studentList.get(i).getID().equals(student.getID())) {
                 studentList.remove(i);
                 return "Successfully removed";
             }

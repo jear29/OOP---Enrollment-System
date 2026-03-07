@@ -1,23 +1,19 @@
 package org.example.model;
 
-public class Student extends Person{
-    private String program;
+public class Instructor extends Person {
+    private String course;
 
-    public Student() {
-
-    }
-
-    public Student (String ID, String name, String program) {
+    public Instructor (String ID, String name, String course) {
         super(ID, name);
-        this.program = program;
+        this.course = course;
     }
 
     public String getProgram() {
-        return program;
+        return course;
     }
 
     public void setProgram(String program) {
-        this.program = program;
+        this.course = course;
     }
 
     public void display() {
@@ -31,7 +27,7 @@ public class Student extends Person{
         return "Student{" +
                 "studentID='" + super.getID() + '\'' +
                 ", studentName='" + super.getName() + '\'' +
-                ", program='" + program + '\'' +
+                ", program='" + course + '\'' +
                 '}';
     }
 }
