@@ -32,9 +32,4 @@ public class Instructor extends Person {
                 ", program='" + course + '\'' +
                 '}';
     }
-
-    @Override
-    public void mainTask() {
-        System.out.println("I teach.");
-    }
 }

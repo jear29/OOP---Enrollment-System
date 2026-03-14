@@ -47,10 +47,5 @@ public class Main {
         tuitionFeePayment.makePayment(2700);
         System.out.println(tuitionFeePayment.getRemainingBalance());
         System.out.println(tuitionFeePayment.isFullyPaid());
-
-        Student student = new Student();
-        student.mainTask();
-        Instructor instructor = new Instructor();
-        instructor.mainTask();
     }
 }

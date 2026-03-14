@@ -5,11 +5,6 @@ public class Student extends Person{
 
     public Student() {}
 
-    @Override
-    public void mainTask() {
-        System.out.println("I study.");
-    }
-
     public Student (String ID, String name, String program) {
         super(ID, name);
         this.program = program;
