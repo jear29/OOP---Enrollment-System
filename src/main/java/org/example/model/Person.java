@@ -1,12 +1,10 @@
 package org.example.model;
 
-public class Person {
+public abstract class Person {
     private String ID;
     private String name;
 
-    public Person() {
-
-    }
+    public Person() {}
 
     public Person(String ID, String name) {
         this.ID = ID;
