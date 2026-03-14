@@ -1,9 +1,13 @@
 package org.example;
 
 import org.example.model.Course;
+import org.example.model.Instructor;
 import org.example.model.Student;
 import org.example.service.CourseRegistration;
 import org.example.service.StudentRegistration;
+import org.example.service.TuitionFeePayment;
+
+import javax.swing.plaf.BorderUIResource;
 
 public class Main {
     public static void main(String[] args) {
@@ -37,5 +41,16 @@ public class Main {
 
         // delete
         courseRegistration.removeCourse(new Course("00001", "Information Management", "Information Technology"));
+        TuitionFeePayment tuitionFeePayment = new TuitionFeePayment();
+
+        System.out.println(tuitionFeePayment.calculateTuitionFee(3, .10));
+        tuitionFeePayment.makePayment(2700);
+        System.out.println(tuitionFeePayment.getRemainingBalance());
+        System.out.println(tuitionFeePayment.isFullyPaid());
+
+        Student student = new Student();
+        student.mainTask();
+        Instructor instructor = new Instructor();
+        instructor.mainTask();
     }
 }

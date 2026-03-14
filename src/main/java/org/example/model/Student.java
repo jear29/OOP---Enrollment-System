@@ -3,8 +3,11 @@ package org.example.model;
 public class Student extends Person{
     private String program;
 
-    public Student() {
+    public Student() {}
 
+    @Override
+    public void mainTask() {
+        System.out.println("I study.");
     }
 
     public Student (String ID, String name, String program) {
